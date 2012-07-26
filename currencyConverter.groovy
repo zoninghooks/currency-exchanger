@@ -17,7 +17,12 @@ while (!finished) {
     str = System.console().readLine();
     int choice = Integer.parseInt(str);
     switch (choice) {
-    case 1: 
+    case 1:
+	  print "How many pounds would you like to convert? ";
+	  str = System.console().readLine();
+	  double pounds = Double.parseDouble(str);
+	  double euro   = pounds * euroOverPoundRatio;
+	  println "£" + pounds + " will give you " + euro + "€";
 	  break;
     case 2: 
 	  break;
@@ -29,3 +34,4 @@ while (!finished) {
     }	  
 }
 println "Exiting the program";
+

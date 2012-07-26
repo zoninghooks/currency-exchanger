@@ -1,9 +1,7 @@
 print "If I give you £1, how many Euro will you give me? ";
-String str = System.console().readLine();
-double euroOverPoundRatio = Double.parseDouble(str);
+double euroOverPoundRatio = Double.parseDouble(System.console().readLine());
 print "If I give you 1€, how many Sterling pounds will you give me? ";
-str = System.console().readLine();
-double poundOverEuroRatio = Double.parseDouble(str);
+double poundOverEuroRatio = Double.parseDouble(System.console().readLine());
 println "OK, now I know enough.";
 boolean finished = false;
 while (!finished) {
@@ -14,13 +12,11 @@ while (!finished) {
     println "   0 - Exit the program";
     println "";
     print   "> ";
-    str = System.console().readLine();
-    int choice = Integer.parseInt(str);
+    int choice = Integer.parseInt(System.console().readLine());
     switch (choice) {
     case 1:
 	  print "How many pounds would you like to convert? ";
-	  str = System.console().readLine();
-	  double pounds = Double.parseDouble(str);
+	  double pounds = Double.parseDouble(System.console().readLine());
 	  double euro   = pounds * euroOverPoundRatio;
 	  println "£" + pounds + " will give you " + euro + "€";
 	  break;

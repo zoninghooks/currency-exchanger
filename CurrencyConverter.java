@@ -15,23 +15,23 @@ while (!finished) {
     int choice = Integer.parseInt(System.console().readLine());
     switch (choice) {
     case 1:
-	  System.out.print("How many pounds would you like to convert? ");
-	  double pounds = Double.parseDouble(System.console().readLine());
-	  double euro   = pounds * euroOverPoundRatio;
-	  System.out.println("£" + pounds + " will give you " + euro + "€");
-	  break;
+      System.out.print("How many pounds would you like to convert? ");
+      double pounds = Double.parseDouble(System.console().readLine());
+      double euro   = pounds * euroOverPoundRatio;
+      System.out.println("£" + pounds + " will give you " + euro + "€");
+      break;
     case 2: 
-	  System.out.print("How many euro would you like to convert? ");
-	  euro   = Double.parseDouble(System.console().readLine());
-	  pounds = euro * poundOverEuroRatio;
-	  System.out.println(euro + "€ will give you £" + pounds);
-	  break;
+      System.out.print("How many euro would you like to convert? ");
+      euro   = Double.parseDouble(System.console().readLine());
+      pounds = euro * poundOverEuroRatio;
+      System.out.println(euro + "€ will give you £" + pounds);
+      break;
     case 0: 
-	  finished = true;
-	  break;
+      finished = true;
+      break;
     default: 
-	  System.out.println("Sorry, that is not a valid option");
-    }	  
+      System.out.println("Sorry, that is not a valid option");
+    }      
 }
 System.out.println("Exiting the program");
 

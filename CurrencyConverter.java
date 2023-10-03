@@ -1,9 +1,10 @@
 public class CurrencyConverter {
     public static void main(String[] args) {
+        java.util.Scanner scan = new java.util.Scanner(System.in);
         System.out.print("If I give you £1, how many Euro will you give me? ");
-        double euroOverPoundRatio = Double.parseDouble(System.console().readLine());
+        double euroOverPoundRatio = scan.nextDouble();
         System.out.print("If I give you 1€, how many Sterling pounds will you give me? ");
-        double poundOverEuroRatio = Double.parseDouble(System.console().readLine());
+        double poundOverEuroRatio = scan.nextDouble();
         System.out.println("OK, now I know enough.");
         boolean finished = false;
         while (!finished) {
@@ -14,17 +15,17 @@ public class CurrencyConverter {
             System.out.println("   0 - Exit the program");
             System.out.println();
             System.out.print(  "> ");
-            int choice = Integer.parseInt(System.console().readLine());
+            int choice = scan.nextInt();
             switch (choice) {
             case 1:
                 System.out.print("How many pounds would you like to convert? ");
-                double pounds = Double.parseDouble(System.console().readLine());
+                double pounds = scan.nextDouble();
                 double euro   = pounds * euroOverPoundRatio;
                 System.out.println("£" + pounds + " will give you " + euro + "€");
                 break;
             case 2:
                 System.out.print("How many euro would you like to convert? ");
-                euro   = Double.parseDouble(System.console().readLine());
+                euro   = scan.nextDouble();
                 pounds = euro * poundOverEuroRatio;
                 System.out.println(euro + "€ will give you £" + pounds);
                 break;
